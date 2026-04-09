@@ -1,0 +1,461 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 1vh; /* ビューポートの高さに合わせる */
+    font-family: Arial, sans-serif;
+    background: #000;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+/* デフォルトスタイル（PC向け） */
+body {
+    font-size: 16px; /* PCの標準フォントサイズ */
+    margin: 0 auto; /* 両側の余白を中央揃え */
+    max-width: 1200px; /* 全体の横幅を制限（必要に応じて変更） */
+    padding: 20px; /* 内容の内側に余白を追加 */
+}
+
+/* モバイル対応（768px以下） */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* フォントサイズを小さくする */
+        margin: 0 24px; /* 両側の余白を追加（15pxずつ） */
+        max-width: 100%; /* 幅を画面いっぱいに */
+        padding: 10px; /* 内容の内側の余白を少し狭く */
+    }
+
+    /* 見出しのフォントサイズを縮小 */
+    h1 {
+        font-size: 20px; /* 大見出しのサイズ */
+    }
+
+    h2 {
+        font-size: 22px; /* 中見出しのサイズ */
+    }
+
+    h3 {
+        font-size: 16px; /* 小見出しのサイズ */
+    }
+
+    h4 {
+        font-size: 16px; /* 小見出しのサイズ */
+    }
+
+    h5 {
+        font-size: 12px; /* 小見出しのサイズ */
+    }
+
+    p {
+        font-size: 14px; /* 小見出しのサイズ */
+    }
+
+    /* ナビゲーションメニューのフォントサイズを調整 */
+    .nav-menu a {
+        font-size: 14px; /* メニューリンクの文字サイズ */
+    }
+
+    /* フッターのフォントサイズ */
+    footer {
+        font-size: 8px; /* フッターの文字サイズをさらに縮小 */
+    }
+}
+
+/* セクションの余白調整 */
+section {
+    margin-bottom: 20px; /* セクション間に余白を追加 */
+}
+
+.nav-menu a,
+.sns-section {
+    padding: 10px 5px; /* 各リンクやSNSセクションも余白を調整 */
+}
+
+/* ヘッダーのスタイルもモバイル対応 */
+header {
+    padding: 10px 15px; /* ヘッダーの内側余白を調整 */
+}
+
+/* ヘッダー */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.5);
+    padding: 10px 0; /* 上下の余白を調整 */
+    text-align: left; /* テキストを中央寄せ */
+    z-index: 100;
+}
+
+/* ナビゲーションメニュー */
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+}
+
+/* 星空背景Canvas（動画の上に配置） */
+#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+/* フッター */
+footer {
+    position: static; /* 固定を解除 */
+    bottom: auto;     /* 自動で配置 */
+    margin-top: auto; /* 残りスペースを埋める */
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background: alpha;
+    color: #fff;
+    text-align: center;
+    z-index: 100;
+    background-position: center; /* 背景画像・色を中央に配置 */
+}
+
+/* コンテンツ部分 */
+main {
+    flex: 1; /* コンテンツが増えても自動的に調整 */
+    margin-top: 15vh; /* 余白を追加 */
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background: transparent; /* Canvas の星空が透けるように設定 */
+    height: 70vh; /* 仮の高さを設定（調整可能） */
+    padding-bottom: 0px; /* フッター部分との間に適切な余白 */
+}
+
+.content-section h1{
+    font-size: 60px;
+    white-space: nowrap; /* テキストが折り返さないように */
+    overflow: hidden;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    white-space: nowrap; /* テキストが折り返さないように */
+    overflow: hidden;
+}
+
+.content-section h3 {
+    font-size: 48px;
+    white-space: nowrap; /* テキストが折り返さないように */
+    overflow: hidden;
+}
+
+.content-section h5{
+    font-size: 30px;
+    white-space: nowrap; /* テキストが折り返さないように */
+    overflow: hidden;
+}
+
+.content-section p{
+    font-size: 20px;
+    white-space: nowrap; /* テキストが折り返さないように */
+    overflow: hidden;
+}
+
+.content-block {
+    margin-bottom: 80px; /* コンテンツ間の空白を調整 */
+}
+
+/* 詳細ボタン1 */
+.detail-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #6a5acd, #00bcd4);
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* 詳細ボタン2 */
+.detail-button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #f15c33, #f75ff5);
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* 詳細ボタン3 */
+.detail-button3 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #56f133, #5fcff7);
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* スマホ表示時にボタンサイズを小さくする */
+@media (max-width: 768px) {
+    .detail-button,
+    .detail-button2,
+    .detail-button3 {
+        padding: 8px 16px; /* ボタンの間隔を小さく */
+        font-size: 14px;   /* テキストのサイズを少し小さく */
+        border-radius: 20px; /* 角の丸みをコンパクトに */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* 影の調整 */
+    }
+}
+
+/* ホバーエフェクト */
+.detail-button:hover {
+    background: linear-gradient(45deg, #00bcd4, #6a5acd);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.detail-button3:hover {
+    background: linear-gradient(45deg, #5fcff7, #56f133);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* ボタンコンテナ */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+/* ボタンコンテナ */
+.button-container2 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button-container3 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* スマホでは縦並びに */
+        gap: 20px;
+    }
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: alpha;
+}
+
+.photo-item {
+    text-align: center;
+}
+
+.photo-box {
+    border: 2px solid #ddd; /* 四角い枠線 */
+    border-radius: 10px; /* 角を少し丸くする */
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 少し立体感を加える */
+}
+
+.photo-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.photo-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.photo-box p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .photo-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center; /* ← これが重要 */
+    }
+
+    .photo-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* SNSセクション */
+.sns-section {
+    display: flex;
+    justify-content: center; /* 間隔を均等に配置 */
+    align-items: center;
+    margin: 40px;
+    gap: 40px; /* 間隔を狭くする */
+}
+
+/* SNSアイテム */
+.sns-item {
+    color: #ffffff; /* 通常アイコン色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* アイコンとテキスト間の距離 */
+}
+
+/* SNSリンクボタン間隔調整 */
+.sns-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px 6px; /* コンパクトに間隔を調整 */
+    gap: 10px; /* アイコンとテキスト間の距離 */
+}
+
+/* SNSリンクアイコンサイズ調整 */
+.sns-link i {
+    font-size: 48px; /* アイコンの大きさを変更（48pxは例） */
+}
+
+/* SNSアイコンホバーエフェクト */
+.sns-link:hover {
+    transform: scale(1.1); /* アイコンが少し大きくなるエフェクト */
+    color: #ff963b;
+}
+
+/* テキストリンク */
+.sns-text-link {
+    white-space: nowrap; /* テキストが折り返さないように */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* テキストリンクホバー */
+.sns-text-link:hover {
+    color: #fa904e;
+}
+
+
+/* トップに戻るボタン */
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #354d65;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .pagetop:hover, .pagetop:hover .pagetop__arrow {
+        border-color: #3293e7;
+    }
+}
+@media (max-width: 768px) {
+    .pagetop {
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        background: #354d65;
+        border: solid 2px #000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
+    }
+    
+    .pagetop__arrow {
+        height: 10px;
+        width: 10px;
+        border-top: 3px solid #000;
+        border-right: 3px solid #000;
+        transform: translateY(20%) rotate(-45deg);
+    }
+}
+
+.photo-box {
+    border: 2px solid #ddd; /* 四角い枠線 */
+    border-radius: 10px; /* 角を少し丸くする */
+    padding: 0px;
+    background-color: rgba(253, 251, 251, 0.927);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 少し立体感を加える */
+    height: 480px; /* 高さを統一 */
+    overflow: hidden; /* 余分な部分を隠す */
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap; /* ボックスが自動的に折り返す */
+    
+}
+
+.photo-box {
+    width: 100%;       /* ← ここ変更 */
+    max-width: 300px;  /* ← 追加 */
+    margin: 0 auto;    /* ← これ重要 */
+}
+
