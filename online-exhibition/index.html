@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学生クリエイティブフェスタ｜作品ギャラリー</title>
+  <link rel="stylesheet" href="css/gallery.css">
+  <script src="js/gallery.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-mark"></span><span>学生クリエイティブフェスタ<small>GAKUSEI CREATIVE FESTA</small></span></a>
+    <span class="header-note">ONLINE GALLERY / 2026</span>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">ARTWORKS</p>
+      <h1>作品ギャラリー</h1>
+      <p class="intro">学生たちの、まだ知らない表現に出会う。</p>
+      <p class="subintro">イラスト・映像・立体作品・音楽など、一人ひとりの視点と思いが込められた作品をご覧ください。</p>
+    </section>
+
+    <section class="collection" aria-labelledby="collection-title">
+      <div class="section-heading"><div><p class="eyebrow">THE COLLECTION</p><h2 id="collection-title">作品一覧</h2></div><p id="count" class="count">読み込み中…</p></div>
+      <nav class="filters" aria-label="作品の絞り込み">
+        <button class="filter-button active" data-filter="all">すべて</button>
+        <button class="filter-button" data-filter="competition">コンペ作品</button>
+        <button class="filter-button" data-filter="award">本選通過作品</button>
+        <button class="filter-button" data-filter="exhibition">展示のみ</button>
+        <button class="filter-button" data-filter="illustration">イラスト</button>
+        <button class="filter-button" data-filter="video">映像</button>
+        <button class="filter-button" data-filter="sculpture">立体作品</button>
+        <button class="filter-button" data-filter="music">音楽</button>
+      </nav>
+      <p id="load-error" class="error-message" hidden></p>
+      <section id="grid" class="gallery-grid" aria-live="polite"></section>
+    </section>
+    <section id="detail" class="detail-panel" hidden aria-live="polite"></section>
+  </main>
+  <footer class="site-footer"><span>©学生団体Rayup</span></footer>
+</body>
+</html>

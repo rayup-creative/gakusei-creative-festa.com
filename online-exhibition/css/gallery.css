@@ -1,0 +1,59 @@
+*{box-sizing:border-box}
+:root{--purple:#7255c7;--purple-dark:#4f389d;--ink:#252431;--muted:#777482;--line:#e8e6ee;--paper:#faf9fc}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif;line-height:1.7}
+.site-header{background:#fff;border-bottom:1px solid var(--line);padding:16px max(16px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;font-size:15px;font-weight:800}.brand-mark{color:var(--purple);font-size:27px;letter-spacing:-.08em;font-weight:900}.brand small{display:block;font-size:9px;color:var(--muted);letter-spacing:.14em}.header-note,.eyebrow{color:var(--purple);font-size:11px;letter-spacing:.17em;font-weight:800}
+.page{width:min(1120px,calc(100% - 32px));margin:38px auto 72px}.hero{padding:10px 0 30px}.eyebrow{margin:0 0 5px}h1{margin:0;font-size:clamp(32px,5vw,46px);line-height:1.25}.intro{font-size:20px;font-weight:700;margin:12px 0 2px}.subintro{color:var(--muted);margin:0;max-width:720px}
+.collection{margin-top:20px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:16px}.section-heading h2{margin:0;font-size:25px}.count{color:var(--muted);font-size:13px;white-space:nowrap}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 22px}.filter-button,.view-button,.back-button{border:1px solid #dedbe7;background:#fff;border-radius:999px;padding:8px 15px;cursor:pointer;font:inherit;font-size:13px}.filter-button:hover,.view-button:hover,.back-button:hover{border-color:var(--purple);color:var(--purple)}.filter-button.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 4px 14px #30205b08;min-width:0}.thumb{aspect-ratio:16/10;background:#eeecf3;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.thumb img{width:100%;height:100%;display:block;object-fit:cover}.thumb-placeholder{color:#777;padding:20px;text-align:center}.play-badge{position:absolute;left:12px;bottom:12px;width:36px;height:36px;border-radius:50%;background:#171522b8;color:#fff;display:grid;place-items:center}
+.card-content{padding:15px}.category{display:inline-block;background:#f0ebff;color:var(--purple-dark);border-radius:999px;padding:2px 9px;font-size:11px;font-weight:800;margin:0 0 7px}h3{font-size:17px;line-height:1.45;margin:0 0 7px}.meta{font-size:12px;color:var(--muted);margin:0 0 12px}.award-label{display:inline-block;color:#9a6a14;background:#fff4d6;border-radius:6px;font-size:11px;padding:2px 7px;margin:0 0 10px}.view-button{width:100%;color:var(--purple);border-color:#d7cef6;font-weight:700}
+.detail-panel{margin-top:28px;padding:clamp(16px,3vw,28px);background:#fff;border:1px solid var(--line);border-radius:18px}.detail-panel[hidden]{display:none}.detail-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.detail-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,1fr);gap:26px;align-items:start}.detail-media{min-width:0}.detail-media video,.detail-media img{width:100%;max-height:70vh;display:block;object-fit:contain;background:#17151d;border-radius:10px}.detail-info h2{margin:5px 0 7px;font-size:26px;line-height:1.35}.detail-description{color:#555260;white-space:pre-wrap}.detail-facts{margin-top:22px;border-top:1px solid var(--line)}.fact{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid #f0eef4;font-size:13px}.fact dt{color:var(--muted)}.fact dd{margin:0}.notice{color:var(--muted);font-size:12px}.error-message{color:#a13c3c;background:#fff0f0;padding:12px 14px;border-radius:10px}.site-footer{border-top:1px solid var(--line);background:#fff;text-align:center;padding:22px 16px;color:var(--muted);font-size:12px}.site-footer span{margin-left:10px}
+@media(max-width:800px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-layout{grid-template-columns:1fr}.detail-media video,.detail-media img{max-height:55vh}}
+@media(max-width:520px){.header-note{display:none}.page{width:calc(100% - 24px);margin-top:25px}.gallery-grid{grid-template-columns:1fr;gap:14px}.section-heading h2{font-size:22px}.intro{font-size:17px}.filters{gap:6px}.filter-button{padding:7px 11px;font-size:12px}.fact{grid-template-columns:82px 1fr}}
+
+
+/* 賞ラベル共通：既存の形・余白・文字サイズを維持 */
+.award-label {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+/* 最優秀賞：ゴールド */
+.award-grand-prize {
+  background-color: #fff1c2;
+  color: #946600;
+  border: 1px solid #e6c35c;
+}
+
+/* 優秀賞： */
+.award-excellence {
+  background-color: #ffe6ed;
+  color: #a83c60;
+  border: 1px solid #f0adc1;
+}
+
+/* 審査員特別賞： */
+.award-judge {
+  background-color: #e4efff;
+  color: #315b9a;
+  border: 1px solid #9dbce8;  
+}
+
+/* 佳作： */
+.award-honorable {
+  background-color: #e6ffe8;
+  color: #3ca85c;
+  border: 1px solid #adf0c0;
+}
+
+/* 佳作： */
+.award-creative {
+  background-color: #fdeccb;
+  color: #e68c43;
+  border: 1px solid #ffc062;
+}
