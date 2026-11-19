@@ -1,0 +1,128 @@
+[
+  {
+    "id": "sabatorakenomike",
+    "title": "自分がくれたもの",
+    "creator": "サバトラ家のミケ",
+    "year": "2026",
+    "category": "illustration",
+    "categoryLabel": "イラスト",
+    "mediaType": "image",
+    "media": "assets/naito.jpg",
+    "description": "お嬢様は女王となり。。。",
+    "participation": "exhibition",
+    "finalist": false,
+    "award": "",
+    "thumbnail": "assets/thumbnail/naito_t.png"
+  },
+  {
+    "id": "wadashiori",
+    "title": "幼いころは常に何かに追われていた",
+    "creator": "ワダシオリ",
+    "year": "2026",
+    "category": "illustration",
+    "categoryLabel": "イラスト",
+    "mediaType": "image",
+    "media": "assets/wadashiori.ayane.jpeg",
+    "description": "自分の幼い頃の思い出を描きました。いちばん古い記憶です。",
+    "participation": "exhibition",
+    "finalist": false,
+    "award": "",
+    "thumbnail": "assets/thumbnail/wada_t.png"
+   },
+   {
+    "id": "huji",
+    "title": "証",
+    "creator": "藤の天",
+    "year": "2026",
+    "category": "illustration",
+    "categoryLabel": "イラスト",
+    "mediaType": "image",
+    "media": "assets/akashi.jpeg",
+    "description": "多くの人が幼少期､公園や学校の草むらで四葉のクローバーを探したと思います｡友達で探したときも1人で探した時もあったかもしれないです｡見つけたあと何十年も大切にすることはありませんし､グラウンドで遊んだ思い出の方がずっと楽しかったはず｡さらに言えば､今その思い出をはっきりと思い出せる人は少ないでしょう｡しかしなぜかクローバーを見つけることに必死になり､魅了されていました｡あの曖昧で不思議なお宝探しを表現しました｡草むらは赤っぽく､クローバーは青っぽくし､そのお宝が遠いものだとしました｡",
+    "participation": "exhibition",
+    "finalist": false,
+    "award": "",
+    "thumbnail": "assets/thumbnail/akashi_t.png"
+   },
+   {
+    "id": "degitalgarden",
+    "title": "2011,06,23",
+    "creator": "デジタルガーデン",
+    "school": "(団体)",
+    "year": "2026",
+    "category": "sculpture",
+    "categoryLabel": "立体作品",
+    "mediaType": "image",
+    "media": "assets/C:dezitaru.png",
+    "description": "幼い頃、雨の植物園で出会った景色の記憶をもとに製作しました。霧に包まれた庭園で美しく咲くバラが雨に滴る神秘的な光景に圧倒された感動は、今も私のデザインや感性の源流となっています。本作は、あの日に見た光景と記憶をそっと箱の中に閉じ込めた立体作品です。会場内では雨を直接降らせることが難しいので、プロジェクションマッピングを用いて雨が降っていた当時の情景や空気感を呼び起こし、感動を鮮明に再現します。",
+    "participation": "exhibition",
+    "finalist": false,
+    "award":"",
+    "thumbnail": "assets/thumbnail/dezital_t.png"
+  }
+  , 
+  {
+  "id": "so-chan",
+    "title": "思い出を飾る花",
+    "creator": "そーちゃん（ドクロバニー）",
+    "year": "2026",
+    "category": "music",
+    "categoryLabel": "音楽",
+    "mediaType": "video",
+    "media": "assets/omoide.mp4",
+    "description": "名古屋の小学四年生９歳の「そーちゃん」です。家族で「ドクロバニー」というファミリーロックバンドをやっています。「思い出を飾る花」というテーマという事で、自分の中のドキドキした思い出をドラムで表現してみました。「飾る」という部分については装飾音を意識し、花という部分については咲き乱れる感じで派手に叩いてみました。よろしくお願いします。",
+    "participation": "exhibition",
+    "finalist": false,
+    "award": "",
+    "thumbnail": "assets/thumbnail/omoide_t.png"
+  }
+  , 
+  {
+  "id": "yu-chan",
+    "title": "やきいも",
+    "creator": "ゆーちゃん（ドクロバニー）",
+    "year": "2026",
+    "category": "music",
+    "categoryLabel": "音楽",
+    "mediaType": "video",
+    "media": "assets/yakiimo.mp4",
+    "description": "名古屋の小学一年生６歳の「ゆーちゃん」です。家族で「ドクロバニー」というファミリーロックバンドをやっています。「思い出を飾る花」というテーマですが、やきいもが美味しかった思い出で生まれて初めて曲を作りました。よろしくお願いします。",
+    "participation": "exhibition",
+    "finalist": false,
+    "award": "",
+    "thumbnail": "assets/thumbnail/yakiimo_t.png"
+  }
+  , 
+  {
+  "id": "ueda",
+    "title": "涙のあとに芽吹く花",
+    "creator": "植田小陽",
+    "year": "2026",
+    "category": "music",
+    "categoryLabel": "音楽",
+    "mediaType": "video",
+    "media": "assets/",
+    "description": "この曲は、孤独に戦い続けた放送部の思い出を込めて制作しました。夜遅くの練習や挫折に抗う気持ちを、「寂しさ」「辛抱強さ」という花言葉を持つシラーに託しています。全体に漂う寂しさの中に、必死に戦う思いを低音で表現し、ラストは少しだけ希望を感じられる構成に仕上げました。誰か一人の心にでも、この曲が響きましたら幸いです。",
+    "participation": "exhibition",
+    "finalist": false,
+    "award": "",
+    "thumbnail": "assets/thumbnail/7.png"
+  }
+  , 
+  {
+  "id": "takahashi",
+    "title": "Aster",
+    "creator": "高橋雪奈",
+    "year": "2026",
+    "category": "music",
+    "categoryLabel": "音楽",
+    "mediaType": "video",
+    "media": "assets/",
+    "description": "「思い出を飾る花」と聞いて私がまっ先に連想したのが、タイトルにある「アスター」という花です。「思い出」「追憶」という花言葉をもつこの花をイメージして、ピアノの音色と踊るような細かい高音で甘美な記憶や将来への希望を表現しました。また、物語の起承転結をイメージして、30秒を4小節区切りで4つの部分に分け、それぞれ起部、承部、転部、結部にふさわしい展開になるように意識して構成しました。",
+    "participation": "exhibition",
+    "finalist": false,
+    "award": "",
+    "thumbnail": "assets/thumbnail/8.png"
+  } 
+
+ ]
